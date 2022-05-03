@@ -16,29 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-iO-Lwh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ixf-8b-pgo">
+                                <rect key="frame" x="-1073" y="-352" width="2560" height="1600"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="bNj-iO-Lwh">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cI-r5-BhT">
+                                <rect key="frame" x="66.5" y="485" width="281" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omt-ou-DoA">
+                                <rect key="frame" x="164" y="419.5" width="86.5" height="57.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ixf-8b-pgo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31D-bG-NAI"/>
+                            <constraint firstItem="Omt-ou-DoA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Kb-Zq-1gU"/>
                             <constraint firstItem="bNj-iO-Lwh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Eij-QT-hbz"/>
+                            <constraint firstItem="5cI-r5-BhT" firstAttribute="top" secondItem="Omt-ou-DoA" secondAttribute="bottom" constant="8" id="HBJ-9L-InJ"/>
+                            <constraint firstItem="Omt-ou-DoA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KqK-sz-IIh"/>
                             <constraint firstItem="bNj-iO-Lwh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PM7-jy-gAi"/>
                             <constraint firstItem="bNj-iO-Lwh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="V7q-EL-2Yp"/>
+                            <constraint firstItem="ixf-8b-pgo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XY7-2q-yNh"/>
+                            <constraint firstItem="5cI-r5-BhT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fca-Ae-fYr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="Omt-ou-DoA" id="xa4-1x-NuJ"/>
                         <outlet property="searchBar" destination="bNj-iO-Lwh" id="TrN-ee-ehC"/>
+                        <outlet property="temperatureLabel" destination="5cI-r5-BhT" id="0Qp-MZ-pHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="98"/>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bg" width="2560" height="1600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
